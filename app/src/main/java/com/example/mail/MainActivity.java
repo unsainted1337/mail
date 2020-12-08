@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<data_get_set> arrayList = new ArrayList<>();
 
+      ArrAdapter arrAdapter = new ArrAdapter(this, R.layout.list_row,arrayList);
+
+      listView.setAdapter(arrAdapter);
     }
 
 
