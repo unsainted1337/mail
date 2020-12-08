@@ -22,7 +22,11 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<data_get_set> arrayList = new ArrayList<>();
 
+        arrayList.add(new data_get_set("name", "lname","09.04.2002",0));
+
       ArrAdapter arrAdapter = new ArrAdapter(this, R.layout.list_row,arrayList);
+
+
 
       listView.setAdapter(arrAdapter);
     }
