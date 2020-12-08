@@ -1,6 +1,7 @@
 package com.example.mail;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -49,7 +50,7 @@ public class ArrAdapter extends ArrayAdapter<data_get_set> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         if (convertView == null) {
-            convertView = View.inflate(context, resource, parent);
+            convertView = LayoutInflater.from(context).inflate(resource,null);
         }
 
         ImageView image = convertView.findViewById(R.id.image);
