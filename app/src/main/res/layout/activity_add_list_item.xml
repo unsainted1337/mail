@@ -7,22 +7,23 @@
     tools:context=".AddListItem">
 
 
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
         android:clickable="true"
-        app:cardCornerRadius="200sp"
+        app:cardCornerRadius="65dp"
         app:cardElevation="0dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/photo"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
             android:background="#6603D9FF"
             android:scaleType="centerCrop" />
 
@@ -36,12 +37,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputName"
+            android:textColorHint="#D703D9FF"
             android:hint="@string/input_name"
             android:inputType="textMultiLine"
             android:layout_width="match_parent"
@@ -62,6 +64,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputLName"
+            android:textColorHint="#D703D9FF"
             android:hint="@string/input_Lname"
             android:inputType="textMultiLine"
             android:layout_width="match_parent"
@@ -81,6 +84,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputbithday"
+            android:textColorHint="#D703D9FF"
             android:hint="@string/input_birthday"
             android:inputType="date"
             android:layout_width="match_parent"
@@ -93,8 +97,6 @@
         android:layout_height="130dp"
         android:layout_width="match_parent"
         android:layout_marginTop="5dp"
-
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/birthdaylay">
@@ -104,13 +106,14 @@
             android:layout_width="match_parent"
             android:layout_height="125dp"
             android:hint="Введите послание"
+            android:textColorHint="#D703D9FF"
             android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/sendMail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="5dp"
         android:background="#FFFFFF"
         android:textColor="#D703D9FF"
@@ -121,12 +124,13 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/save"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="5dp"
         android:background="#FFFFFF"
-        android:textColor="#D703D9FF"
         android:text="Сохранить"
+        android:textColor="#D703D9FF"
         app:backgroundTint="#00FF0000"
         app:layout_constraintTop_toBottomOf="@+id/sendMail" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
