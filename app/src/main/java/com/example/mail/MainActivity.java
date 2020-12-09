@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     public void add_list_item(View view) {
 
         Intent intent = new Intent(this,AddListItem.class);
+        startActivity(intent);
 
     }
 }
