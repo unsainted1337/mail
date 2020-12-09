@@ -3,7 +3,9 @@ package com.example.mail;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -31,5 +33,9 @@ public class MainActivity extends AppCompatActivity {
       listView.setAdapter(arrAdapter);
     }
 
+    public void add_list_item(View view) {
 
+        Intent intent = new Intent(this,AddListItem.class);
+
+    }
 }
