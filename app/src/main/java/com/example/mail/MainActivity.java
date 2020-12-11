@@ -51,9 +51,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
-             name = getIntent().getStringExtra("name");
-             Lname = getIntent().getStringExtra("Lname");
-             birthday = getIntent().getStringExtra("birthday");
+             name = data.getStringExtra("name");
+             Lname = data.getStringExtra("Lname");
+             birthday = data.getStringExtra("birthday");
 
         }
     }
