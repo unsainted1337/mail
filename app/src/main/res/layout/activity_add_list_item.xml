@@ -7,47 +7,36 @@
     tools:context=".AddListItem">
 
 
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
+    <ImageView
+        android:id="@+id/photo"
         android:clickable="true"
-        app:cardCornerRadius="65dp"
-        app:cardElevation="0dp"
+        android:layout_width="125dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="125dp"
+        android:background="#6603D9FF"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/photo"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
-            android:background="#6603D9FF"
-            android:scaleType="centerCrop" />
-
-    </com.google.android.material.card.MaterialCardView>
-
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/namelay"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card"
         android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/photo"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputName"
-            android:textColorHint="#D703D9FF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="@string/input_name"
             android:inputType="textMultiLine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textColorHint="#D703D9FF" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -55,20 +44,20 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lnamelay"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namelay"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/photo"
+        app:layout_constraintTop_toBottomOf="@+id/namelay">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputLName"
-            android:textColorHint="#D703D9FF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="@string/input_Lname"
             android:inputType="textMultiLine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textColorHint="#D703D9FF" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -79,6 +68,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lnamelay"
         android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -92,22 +83,45 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textmaillay"
+        android:id="@+id/adressMaillay"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_height="130dp"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/birthdaylay">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputMailadress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/inout_adress_mail"
+            android:inputType="textMultiLine"
+            android:textColorHint="#D703D9FF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textmaillay"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adressMaillay">
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputMailText"
             android:layout_width="match_parent"
-            android:layout_height="125dp"
+            android:layout_height="wrap_content"
             android:hint="Введите послание"
-            android:textColorHint="#D703D9FF"
-            android:inputType="date" />
+            android:inputType="textMultiLine"
+            android:textColorHint="#D703D9FF" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -118,6 +132,8 @@
         android:background="#FFFFFF"
         android:textColor="#D703D9FF"
         android:text="Отправить письмо"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         app:backgroundTint="#00FF0000"
         app:layout_constraintTop_toBottomOf="@+id/textmaillay" />
 
@@ -126,6 +142,8 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
         android:background="#FFFFFF"
         android:text="Сохранить"
         android:textColor="#D703D9FF"

@@ -3,4 +3,5 @@
     <string name="input_name">Введите имя</string>
     <string name="input_Lname">Введите фамилию</string>
     <string name="input_birthday">Введите дату рождения</string>
+    <string name="inout_adress_mail">Введите адрес эл.почты</string>
 </resources>
